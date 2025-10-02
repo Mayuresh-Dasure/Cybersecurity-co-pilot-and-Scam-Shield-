@@ -1,0 +1,15 @@
+{"timestamp": "Oct 2 08:05:00", "host": "server", "service": "sshd", "pid": "12345", "message": "Failed password for root from 203.91.112.5 port 22 ssh2"}
+{"timestamp": "Oct 2 08:05:00", "host": "server", "user": "root", "ip": "203.91.112.5", "port": 22, "action": "Failed password for", "raw": "Oct 2 08:05:00 server sshd[12345]: Failed password for root from 203.91.112.5 port 22 ssh2"}
+{"timestamp": "Oct 2 08:10:00", "host": "server", "user": "admin", "ip": "192.168.1.10", "port": 22, "action": "Failed password for", "raw": "Oct 2 08:10:00 server sshd[12346]: Failed password for admin from 192.168.1.10 port 22 ssh2"}
+{"timestamp": "Oct 2 08:15:00", "host": "server", "user": "user1", "ip": "10.0.0.5", "port": 22, "action": "Accepted password for", "raw": "Oct 2 08:15:00 server sshd[12347]: Accepted password for user1 from 10.0.0.5 port 22 ssh2"}
+{"raw": "Malformed log line for testing", "error": "Unable to parse"}
+{"timestamp": "Oct 2 08:05:00", "host": "server", "user": "root", "ip": "203.91.112.5", "port": 22, "action": "Failed password for", "raw": "Oct 2 08:05:00 server sshd[12345]: Failed password for root from 203.91.112.5 port 22 ssh2"}
+{"timestamp": "Oct 2 08:10:00", "host": "server", "user": "admin", "ip": "192.168.1.10", "port": 22, "action": "Failed password for", "raw": "Oct 2 08:10:00 server sshd[12346]: Failed password for admin from 192.168.1.10 port 22 ssh2"}
+{"timestamp": "Oct 2 08:15:00", "host": "server", "user": "user1", "ip": "10.0.0.5", "port": 22, "action": "Accepted password for", "raw": "Oct 2 08:15:00 server sshd[12347]: Accepted password for user1 from 10.0.0.5 port 22 ssh2"}
+{"raw": "Malformed log line for testing", "error": "Unable to parse"}
+{"timestamp": "Oct 2 09:00:00", "host": "server", "user": "root", "ip": "203.91.112.5", "port": 22, "action": "Failed password for", "raw": "Oct 2 09:00:00 server sshd[12348]: Failed password for root from 203.91.112.5 port 22 ssh2"}
+{"timestamp": "Oct 2 09:01:00", "host": "server", "user": "admin", "ip": "192.168.1.11", "port": 22, "action": "Failed password for", "raw": "Oct 2 09:01:00 server sshd[12349]: Failed password for admin from 192.168.1.11 port 22 ssh2"}
+{"timestamp": "Oct 2 09:02:00", "host": "server", "user": "user2", "ip": "10.0.0.6", "port": 22, "action": "Accepted password for", "raw": "Oct 2 09:02:00 server sshd[12350]: Accepted password for user2 from 10.0.0.6 port 22 ssh2"}
+{"timestamp": "Oct 2 08:05:00", "host": "server", "service": "sshd", "pid": "12345", "message": "Failed password for root from 203.91.112.5 port 22 ssh2"}
+{"timestamp": "Oct 2 08:10:00", "host": "server", "service": "sshd", "pid": "12346", "message": "Failed password for admin from 192.168.1.10 port 22 ssh2"}
+{"timestamp": "Oct 2 08:15:00", "host": "server", "service": "sshd", "pid": "12347", "message": "Accepted password for user1 from 10.0.0.5 port 22 ssh2"}
