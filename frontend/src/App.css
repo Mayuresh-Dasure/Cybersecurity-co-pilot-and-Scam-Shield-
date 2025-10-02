@@ -1,0 +1,239 @@
+/* frontend/src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1a1a2e; /* Darker background for the overall page */
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #282a36; /* Slightly lighter dark background for the card */
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  margin-top: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo-icon svg {
+  color: #8a2be2; /* Purple color for the shield icon */
+  margin-right: 15px;
+}
+
+.title {
+  font-size: 2.8em;
+  color: #e0e0e0; /* White for the title */
+  margin: 0;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.1em;
+  color: #bbb;
+  margin-top: -10px;
+  font-weight: 300;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.6em;
+  color: #8a2be2; /* Purple for section titles */
+  border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.section-description {
+  font-size: 0.95em;
+  color: #b0b0b0;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+/* Input Area */
+.input-textarea {
+  width: 100%;
+  padding: 15px;
+  background-color: #3b3d4a; /* Darker input background */
+  border: 1px solid #5a5d73;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 1em;
+  resize: vertical; /* Allow vertical resizing */
+  box-sizing: border-box; /* Include padding in width */
+  margin-bottom: 20px;
+}
+.input-textarea::placeholder {
+  color: #999;
+}
+
+.analyze-button {
+  width: 100%;
+  padding: 15px 20px;
+  background-color: #8a2be2; /* Purple button */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.analyze-button:hover:not(:disabled) {
+  background-color: #6a1ac1; /* Darker purple on hover */
+}
+.analyze-button:disabled {
+  background-color: #5a5d73;
+  cursor: not-allowed;
+}
+
+/* Output Area */
+.output-section {
+  margin-top: 40px;
+}
+
+.output-card {
+  background-color: #3b3d4a; /* Output card background */
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #5a5d73;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  position: relative; /* For confidence absolute positioning */
+}
+
+.output-card h3 {
+  color: #8a2be2; /* Purple for sub-titles */
+  font-size: 1.2em;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.output-card h3:first-of-type {
+  margin-top: 0; /* No top margin for the first h3 */
+}
+
+.output-summary {
+  color: #e0e0e0;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.output-action {
+  background-color: #2d2d3a; /* Darker background for code block */
+  border: 1px solid #5a5d73;
+  padding: 15px;
+  border-radius: 6px;
+  font-family: 'Cascadia Code', 'Fira Code', monospace; /* Monospace font for code */
+  color: #a9e34b; /* Greenish color for code */
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+  font-size: 0.95em;
+  margin-bottom: 10px;
+}
+
+.output-raw-input {
+  background-color: #2d2d3a;
+  border: 1px dashed #777; /* Dashed border to differentiate it */
+  padding: 15px;
+  border-radius: 6px;
+  font-family: 'Cascadia Code', 'Fira Code', monospace;
+  color: #ccc; /* A lighter color for the raw text */
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+  font-size: 0.9em;
+  margin-bottom: 25px; /* Add space between raw input and AI summary */
+}
+
+.confidence {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: #8a2be2; /* Purple for confidence text */
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.loading-message, .empty-output-message {
+  text-align: center;
+  color: #b0b0b0;
+  font-style: italic;
+  padding-top: 50px; /* Center vertically if no content */
+  flex-grow: 1; /* Pushes to center in flex container */
+}
+
+/* ADD ALL THIS CSS TO THE END OF YOUR App.css FILE */
+
+/* --- Severity Styling --- */
+
+/* This styles the badge itself */
+.severity-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #1a1a1a; /* Dark text for all badges */
+}
+
+/* Color for HIGH severity (Red) */
+.severity-high {
+  background-color: #ff5252; /* Red */
+}
+
+/* Color for MEDIUM severity (Yellow) */
+.severity-medium {
+  background-color: #ffc107; /* Yellow */
+}
+
+/* Color for LOW severity (Green) */
+.severity-low {
+  background-color: #4caf50; /* Green */
+}
+
+/* This makes the card's left border change color */
+.output-card.severity-high { border-left: 5px solid #ff5252; }
+.output-card.severity-medium { border-left: 5px solid #ffc107; }
+.output-card.severity-low { border-left: 5px solid #4caf50; }
+
+/* A small container to align the title and badge */
+.analysis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.analysis-header h3 {
+  margin: 0; /* Remove default margins from h3 */
+}
