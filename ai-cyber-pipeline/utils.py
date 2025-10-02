@@ -1,3 +1,4 @@
+import os
 import re
 import json
 
@@ -21,5 +22,6 @@ def detect_scam_message(msg: str) -> dict:
 
 # --- Save output as JSON ---
 def save_json(data, path="outputs/output.jsonl"):
-    with open(path, "a") as f:
-        f.write(json.dumps(data) + "\n")
+    os.makedirs(os.path.dirname(path), exist_ok=True)  # auto-create folder
+    with open(path, "a", encoding="utf-8") as f:      # UTF-8 safe
+        f.write(json.dumps(data, ensure_ascii=False) + "\n")  # preserve unicode

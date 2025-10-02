@@ -75,7 +75,7 @@ def ingest_log():
 @app.route("/ingest_message", methods=["POST"])
 def ingest_message():
     data = request.json
-    message = data.get("message", "")
+    message = str(data.get("message", ""))  # Force string
     if not message:
         return jsonify({"error": "No message provided"}), 400
     result = detect_scam_message(message)
@@ -85,7 +85,7 @@ def ingest_message():
 @app.route("/analyze", methods=["POST"])
 def analyze_text():
     data = request.json
-    text = data.get("text", "")
+    text = str(data.get("text", ""))
     if not text:
         return jsonify({"error": "No text provided"}), 400
 

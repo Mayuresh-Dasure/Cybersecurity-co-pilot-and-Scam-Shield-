@@ -12,3 +12,11 @@
 {"timestamp": "2025-10-02 09:24:52", "endpoint": "/ingest_message", "input": ["You won a prize! Claim now."], "status": "success"}
 {"timestamp": "2025-10-02 09:24:54", "endpoint": "/ingest_log", "input": ["Oct 2 09:02:00 server sshd[12350]: Accepted password for user2 from 10.0.0.6 port 22 ssh2"], "status": "success"}
 {"timestamp": "2025-10-02 09:24:54", "endpoint": "/ingest_message", "input": ["System alert: suspicious login detected."], "status": "success"}
+{"timestamp": "2025-10-02T14:18:42.428994Z", "endpoint": "/bulk_ingest", "status": "success", "info": {"processed": 4, "skipped": 0}}
+{"timestamp": "2025-10-02T14:18:42.469244Z", "endpoint": "/bulk_ingest", "status": "success", "info": {"processed": 4, "skipped": 0}}
+{"timestamp": "2025-10-02T14:25:33.502811Z", "endpoint": "/ingest_message", "status": "error", "info": {"error": "'dict' object has no attribute 'lower'"}}
+{"timestamp": "2025-10-02T14:25:33.586260Z", "endpoint": "/ingest_message", "status": "error", "info": {"error": "'dict' object has no attribute 'lower'"}}
+{"timestamp": "2025-10-02T14:25:33.595190Z", "endpoint": "/ingest_message", "status": "error", "info": {"error": "'dict' object has no attribute 'lower'"}}
+{"timestamp": "2025-10-02T14:25:51.121242Z", "endpoint": "/ingest_message", "status": "error", "info": {"error": "'dict' object has no attribute 'lower'"}}
+{"timestamp": "2025-10-02T14:25:51.193716Z", "endpoint": "/ingest_message", "status": "error", "info": {"error": "'dict' object has no attribute 'lower'"}}
+{"timestamp": "2025-10-02T14:25:51.203630Z", "endpoint": "/ingest_message", "status": "error", "info": {"error": "'dict' object has no attribute 'lower'"}}

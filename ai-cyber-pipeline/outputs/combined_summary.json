@@ -1,0 +1,95 @@
+[
+    {
+        "type": "log",
+        "raw": "Oct 2 10:00:01 server sshd[12345]: Failed password for invalid user root from 203.91.112.5 port 22 ssh2",
+        "parsed": {
+            "timestamp": "Oct 2 10:00:01",
+            "host": "server",
+            "service": "sshd",
+            "pid": "12345",
+            "message": "Failed password for invalid user root from 203.91.112.5 port 22 ssh2"
+        },
+        "classification": {
+            "source": "log",
+            "text": "Oct 2 10:00:01 server sshd[12345]: Failed password for invalid user root from 203.91.112.5 port 22 ssh2",
+            "threat": "Failed SSH login",
+            "severity": "Medium"
+        },
+        "summary": "Multiple failed SSH login attempts detected.",
+        "action": "Monitor IP and consider blocking: 203.91.112.5"
+    },
+    {
+        "type": "log",
+        "raw": "Oct 2 10:01:22 server sshd[12346]: Failed password for admin from 45.33.12.100 port 2222 ssh2",
+        "parsed": {
+            "timestamp": "Oct 2 10:01:22",
+            "host": "server",
+            "service": "sshd",
+            "pid": "12346",
+            "message": "Failed password for admin from 45.33.12.100 port 2222 ssh2"
+        },
+        "classification": {
+            "source": "log",
+            "text": "Oct 2 10:01:22 server sshd[12346]: Failed password for admin from 45.33.12.100 port 2222 ssh2",
+            "threat": "Failed SSH login",
+            "severity": "Medium"
+        },
+        "summary": "Multiple failed SSH login attempts detected.",
+        "action": "Monitor IP and consider blocking: 45.33.12.100"
+    },
+    {
+        "type": "log",
+        "raw": "Oct 2 10:02:44 server sshd[12347]: Accepted password for user from 192.168.1.10 port 54321 ssh2",
+        "parsed": {
+            "timestamp": "Oct 2 10:02:44",
+            "host": "server",
+            "service": "sshd",
+            "pid": "12347",
+            "message": "Accepted password for user from 192.168.1.10 port 54321 ssh2"
+        },
+        "classification": {
+            "source": "log",
+            "text": "Oct 2 10:02:44 server sshd[12347]: Accepted password for user from 192.168.1.10 port 54321 ssh2",
+            "threat": "Successful login",
+            "severity": "Low"
+        },
+        "summary": "Successful login detected.",
+        "action": "No immediate action required."
+    },
+    {
+        "type": "message",
+        "text": "Your account has been blocked! Click here to verify: http://fakebank.com",
+        "classification": {
+            "source": "message",
+            "text": "Your account has been blocked! Click here to verify: http://fakebank.com",
+            "threat": "Possible Phishing",
+            "severity": "High"
+        },
+        "summary": "Potential phishing message detected.",
+        "action": "Warn user and block sender if possible."
+    },
+    {
+        "type": "message",
+        "text": "Congratulations! You won a lottery. Send your bank details.",
+        "classification": {
+            "source": "message",
+            "text": "Congratulations! You won a lottery. Send your bank details.",
+            "threat": "Possible Phishing",
+            "severity": "High"
+        },
+        "summary": "Potential phishing message detected.",
+        "action": "Warn user and block sender if possible."
+    },
+    {
+        "type": "message",
+        "text": "Meeting at 5PM in conference room, bring documents.",
+        "classification": {
+            "source": "message",
+            "text": "Meeting at 5PM in conference room, bring documents.",
+            "threat": "Normal message",
+            "severity": "Low"
+        },
+        "summary": "Message appears safe.",
+        "action": "No action required."
+    }
+]
