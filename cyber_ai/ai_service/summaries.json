@@ -1,0 +1,30 @@
+﻿[
+    {
+        "action":  "Check login attempts, consider blocking IP.",
+        "confidence":  75,
+        "log":  "Multiple failed SSH login attempts detected from 203.91.112.5",
+        "severity":  "Medium",
+        "summary":  "Several failed SSH login attempts have been detected."
+    },
+    {
+        "action":  "Immediate investigation and block suspicious IPs.",
+        "confidence":  90,
+        "log":  "Unauthorized access attempt detected from IP 192.168.1.100",
+        "severity":  "High",
+        "summary":  "Unauthorized access attempt detected from IP 192.168.1.100"
+    },
+    {
+        "action":  "Alert users and block sender.",
+        "confidence":  95,
+        "log":  "Phishing email received from suspicious@example.com",
+        "severity":  "High",
+        "summary":  "You are a cybersecurity expert."
+    },
+    {
+        "action":  "Monitor the system.",
+        "confidence":  50,
+        "log":  "Normal login from user Alice at 10:15AM",
+        "severity":  "Low",
+        "summary":  "You are a cybersecurity expert."
+    }
+]
